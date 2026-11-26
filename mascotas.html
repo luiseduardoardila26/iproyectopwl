@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciar sesion del inventario ADSO</title>
+    <!--css de bootstrap 5.3.3 desde url predeterminada-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--libreria de iconos en bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet"><!--llama a los estilos peronalizados-->
+</head>
+<body class="bg-body-tertiary">
+    <!--menu lateral-->
+    <!--offcanvas en pantallas menores al lg es un panel oculto que se desliza-->
+    <!--desde el lg se muestra norma. offcanvas-start lo hace salir por la izquierda. sidebar es muestra la clase el id usa el boton que lo abre-->
+    <aside class="offcanvas-lg offcanvas-start sidebar" tabindex="-1" id="menuLateral" aria-labelledby="tituloMenu">
+        <!--encabezado de el panel; bootstrap solo lo muestra en celular-->
+        <div class="offcanvas-header border-bottom border-secondary">
+            <!--nombre del sistema en el panel movil-->
+            <h5 class="offcanvas-title" id="tituloMenu"><i class="bi bi-shop me-2"></i>Paws of love</h5>
+            <!--button x blanco de cierre de panel -->
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#menuLateral" aria-label="Cerrar menu"></button>
+        </div>
+        <!--cuerpo del menu flexbox em columan para apilar el logo enlaces y boton de salida -->
+        <div class="offcanvas-body flex-column p-3">
+            <!--logo solo se ve en computador -->
+            <a href="dashboard.html" class="d-none d-lg-flex align-items-center mb-3 text-white text-decoration-none fs-5 fw-bold">
+                <!--icono verde y nombre-->
+                <i class="bi bi-shop me-2 text-sena"></i><span class="text-white">Paws of love</span>
+                <!--cierra logo -->
+            </a>
+        <!--lista de navegacion en columna (flex-column) .nav-pills de forma de pildora al enlace activo mb-auto empuja lo que sigue hast ale fondo-->
+        <ul class="nav nav-pills flex-column mb-auto">
+            <!--Enlace al dashboard active lo resalta en verde y aria -current="page" la pafgina actual en cada modulo el active pasa si propio enlace-->
+            <li class="nav-item"><a href="dashboard.html" class="nav-link active" aria-current="page"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+            <!--Enlace a modulo usuarios-->
+            <li class="nav-item"><a href="usuarios.html" class="nav-link"><i class="bi bi-person-standing"></i>usuarios</a></li>  
+            <!--link categoria-->
+            <li class="nav-item"><a href="categorias.html" class="nav-link"><i class="bi bi-tags me-2"></i>categorias</a></li>
+            <li class="nav-item"><a href="formulario.html" class="nav-link"><i class="bi bi-card-list"></i> formulario</a></li>
+            <li class="nav-item"><a href="productos.html" class="nav-link"><i class="bi bi-box-seam me-2"></i>Productos</a></li>
+            <li class="nav-item"><a href="citas.html" class="nav-link"><i class="bi bi-calendar3"></i> citas</a></li>
+            <li class="nav-item"><a href="mascotas.html" class="nav-link"><i class="bi bi-house-heart"></i> mascotas</a></li>
+            <li class="nav-item"><a href="categoria_de_mascotas.html" class="nav-link"><i class="bi bi-diagram-3-fill"></i> categoria de mascota</a></li>
+            <li class="nav-item"><a href="donaciones.html" class="nav-link"><i class="bi bi-cash-coin"></i> donaciones</a></li>
+            <li class="nav-item"><a href="empleados.html" class="nav-link"><i class="bi bi-people me-2"></i> empleados</a></li>
+        </ul>
+        </ul>
+        <hr>

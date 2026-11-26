@@ -1,0 +1,147 @@
+<main class="p-3 p-md-4">
+            <div class="mb-4">
+                <h1 class="h3 mb-1">Agenda tus citas aquí</h1>
+                <p class="text-secondary mb-0">Selecciona el día y hora en que deseas conocer a tu futuro compañero</p>
+            </div>
+<div class="row g-3">
+                    <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <!--Titulo pequeño-->
+                            <h2 class="h6 mb-0">Agenda disponibles</h2>
+                            <!--boton que lleva al modulo productos-->
+                            <a href="productos.html" class="btn btn-sm btn-outline-secondary">Ver todos</a>
+                        </div>
+
+
+
+<!-- Encabezado. -->
+                        <div class="modal-header">
+                            <!-- Título. -->
+                            <h2 class="modal-title fs-5" id="tituloModalCategoria"><i class="bi bi-tag me-2"></i>Datos de la categoría</h2>
+                            <!-- Cerrar. -->
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        <!-- Cierra el encabezado. -->
+                        </div>
+                        <!-- Cuerpo. -->
+                        <div class="modal-body">
+                            <!-- Formulario de una sola columna. -->
+                            <form>
+                                <!-- Grupo con margen inferior. -->
+                                <div class="mb-3">
+                                    <!-- Etiqueta. -->
+                                    <label for="catNombre de la mascota seleccionada:" class="form-label">Nombre de la mascota seleccionada:</label>
+                                    <!-- maxlength="50" impide escribir más de 50 caracteres. -->
+                                    <input type="text" class="form-control" id="catNombre de la mascota seleccionada:" placeholder="Ej: Tecnología" maxlength="50" required>
+                                <!-- Cierra el grupo. -->
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <!-- Etiqueta. -->
+                                    <label for="catSeleccione la fecha:" class="form-label">Seleccione la fecha:</label>
+                                    <!-- maxlength="50" impide escribir más de 50 caracteres. -->
+                                    <input type="text" class="form-control" id="Seleccione la fecha:" placeholder="Ej: Tecnología" maxlength="50" required>
+                                <!-- Cierra el grupo. -->
+                                </div>
+
+
+
+                                <!-- Grupo. -->
+                                <div class="mb-3">
+                                    <!-- Etiqueta. -->
+                                    <label for="catDescripcion" class="form-label">Descripción</label>
+                                    <!-- Área de texto de 3 líneas con estilo form-control. -->
+                                    <textarea class="form-control" id="catDescripcion" rows="3" placeholder="¿Qué productos incluye?"></textarea>
+                                <!-- Cierra el grupo. -->
+                                </div>
+                                <!-- Grupo de selección de color. -->
+                                <div class="mb-3">
+                                    <!-- Etiqueta general (d-block la pone en su propia línea). -->
+                                    <span class="form-label d-block">Color de la tarjeta</span>
+                                    <!-- btn-check oculta el botón de opción (radio)… Todos comparten name="catColor", así solo uno puede estar marcado. -->
+                                    <input type="radio" class="btn-check" name="catColor" id="colorVerde" checked>
+                                    <!-- …y su label se ve como botón. Al marcarlo, el botón se rellena. -->
+                                    <label class="btn btn-outline-success btn-sm" for="colorVerde">Verde</label>
+                                    <!-- Segunda opción. -->
+                                    <input type="radio" class="btn-check" name="catColor" id="colorAzul">
+                                    <!-- Botón azul. -->
+                                    <label class="btn btn-outline-primary btn-sm" for="colorAzul">Azul</label>
+                                    <!-- Tercera opción. -->
+                                    <input type="radio" class="btn-check" name="catColor" id="colorAmarillo">
+                                    <!-- Botón amarillo. -->
+                                    <label class="btn btn-outline-warning btn-sm" for="colorAmarillo">Amarillo</label>
+                                <!-- Cierra el grupo. -->
+                                </div>
+                                <!-- Interruptor de estado. -->
+                                <div class="form-check form-switch">
+                                    <!-- Encendido por defecto. -->
+                                    <input class="form-check-input" type="checkbox" role="switch" id="catActiva" checked>
+                                    <!-- Etiqueta. -->
+                                    <label class="form-check-label" for="catActiva">Categoría activa</label>
+                                <!-- Cierra el interruptor. -->
+                                </div>
+                            <!-- Cierra el formulario. -->
+                            </form>
+                        <!-- Cierra el cuerpo. -->
+                        </div>
+                        <!-- Pie. -->
+                        <div class="modal-footer">
+                            <!-- Cancelar. -->
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <!-- Guardar (en el prototipo solo cierra). -->
+                            <button type="button" class="btn btn-sena" data-bs-dismiss="modal"><i class="bi bi-save me-1"></i>Guardar</button>
+                        <!-- Cierra el pie. -->
+                        </div>
+                    <!-- Cierra el contenido. -->
+                    </div>
+                <!-- Cierra el diálogo. -->
+                </div>
+            <!-- Cierra el modal. -->
+            </div>
+
+            <!-- Modal: confirmar eliminación -->
+            <!-- Modal de confirmación. -->
+            <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="tituloModalEliminar" aria-hidden="true">
+                <!-- Pequeño y centrado. -->
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                    <!-- Contenido. -->
+                    <div class="modal-content">
+                        <!-- Cuerpo centrado. -->
+                        <div class="modal-body text-center p-4">
+                            <!-- Ícono de advertencia. -->
+                            <i class="bi bi-exclamation-triangle text-danger display-5"></i>
+                            <!-- Pregunta. -->
+                            <h2 class="h5 mt-3" id="tituloModalEliminar">¿Eliminar esta categoría?</h2>
+                            <!-- Avisa la consecuencia en cadena (relación categoría → subcategoría). -->
+                            <p class="text-secondary small mb-0">También se eliminarán sus subcategorías.</p>
+                        <!-- Cierra el cuerpo. -->
+                        </div>
+                        <!-- Pie centrado. -->
+                        <div class="modal-footer justify-content-center border-0 pt-0">
+                            <!-- Cancelar. -->
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+                            <!-- Confirmar. -->
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Sí, eliminar</button>
+                        <!-- Cierra el pie. -->
+                        </div>
+                    <!-- Cierra el contenido. -->
+                    </div>
+                <!-- Cierra el diálogo. -->
+                </div>
+            <!-- Cierra el modal. -->
+            </div>
+<!-- FIN CONTENIDO -->
+        <!-- Cierra el contenido. -->
+        </main>
+    <!-- Cierra la zona derecha. -->
+    </div>
+
+    <!-- JavaScript de Bootstrap: necesario para el menú deslizable, el desplegable del usuario y los modales. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Cierra el cuerpo. -->
+</body>
+<!-- Cierra el documento. -->
+</html>
+Mostrando categorias.html
+                        

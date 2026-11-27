@@ -6,8 +6,8 @@
 /* Las variables de :root sirven en todo el documento. */
 :root {
     /* Verde institucional del SENA. */
---sena-verde: #e02911;/*toda variable inicia con -- el color esta en hexadecimal pero lo podemos colocar en texto*/
-    --sena-verde-oscuro: #dceb0b;
+--sena-verde: #6f00ff;/*toda variable inicia con -- el color esta en hexadecimal pero lo podemos colocar en texto*/
+    --sena-verde-oscuro: #000000;
     --sena-azul:#212529;
     --sena-titulo: #212529;
     --sidebar-ancho: 250px/*ancho del menu lateral px es la unidad*/

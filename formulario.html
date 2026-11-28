@@ -21,12 +21,11 @@
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
             <li class="nav-item"><a href="usuarios.html" class="nav-link"><i class="bi bi-person-standing"></i>usuarios</a></li>  
-            <li class="nav-item"><a href="categorias.html" class="nav-link"><i class="bi bi-tags me-2"></i>categorias</a></li>
             <li class="nav-item"><a href="formulario.html" class="nav-link" aria-current="page"><i class="bi bi-card-list"></i> formulario</a></li>
             <li class="nav-item"><a href="productos.html" class="nav-link"><i class="bi bi-box-seam me-2"></i>Productos</a></li>
             <li class="nav-item"><a href="citas.html" class="nav-link"><i class="bi bi-calendar3"></i> citas</a></li>
             <li class="nav-item"><a href="mascotas.html" class="nav-link"><i class="bi bi-house-heart"></i> mascotas</a></li>
-            <li class="nav-item"><a href="categoria de mascotas.html" class="nav-link"><i class="bi bi-diagram-3-fill"></i> categoria de mascota</a></li>
+            <li class="nav-item"><a href="categoria_de_mascotas.html" class="nav-link"><i class="bi bi-diagram-3-fill"></i> categoria de mascota</a></li>
             <li class="nav-item"><a href="donaciones.html" class="nav-link"><i class="bi bi-cash-coin"></i> donaciones</a></li>
             <li class="nav-item"><a href="empleados.html" class="nav-link"><i class="bi bi-people me-2"></i> empleados</a></li>
         </ul>
@@ -34,17 +33,16 @@
          <a href="index.html" class="btn btn-outline-light btn-sm"><i class="bi bi-box-arrow-left me-1"></i>Cerrar sesion</a>
     </div>
 </aside>
-
 <div class="contenido">
     <nav class="navbar bg-white border-bottom px-3 sticky-top">
         <button class="btn btn-outline-secondary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-label="Abrir Menu">
-                    <i class="bi bi-list"></i>
+        <i class="bi bi-list"></i>
         </button>
         <span class="navbar-text fw-semibold d-none d-sm-inline">Panel de administracion</span>
         <div class="dropdown ms-auto">
             <button class="btn btn-light dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle fs-5"></i>
-                <span class="d-none d-md-inline">Administrador</span>
+                <span class="d-none d-md-inline">Usuario</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow">
                     <li><h6 class="dropdown-header">nombre@correo.com</h6></li>
@@ -61,12 +59,13 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 small">
                                 <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="citas.html">Citas</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Formulario</li>
                             </ol>
                         </nav>
                     </div>
-                    <button type="button" class="btn btn-sena" data-bs-toggle="modal" data-bs-target="#modalUsuario">
-                        <i class="bi bi-card-list me-1"></i>Nuevo formulario
+                    <button type="button" class="btn btn-sena" data-bs-toggle="modal" data-bs-target="#modalFormulario">
+                        <i class="bi bi-card-list me-1"></i>Crear nuevo formulario
                     </button>
                 </div>
                 <div class="card border-0 shadow-sm">
@@ -122,7 +121,7 @@
                                     <td><span class="badge rounded-pill text-bg-success">Activo</span></td>
                                     <td><span class="badge rounded-pill text-bg-success">20/04/2026</span></td>
                                     <td class="text-end text-nowrap">
-                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalUsuario" title="Editar">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalFormulario" title="Editar">
                                             <i class="bi bi-pencil"></i>
                                         </button>
                                         <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar">
@@ -146,7 +145,7 @@
                                     <td><span class="badge rounded-pill text-bg-success">Activo</span></td>
                                     <td><span class="badge rounded-pill text-bg-success">15/07/2026</span></td>
                                     <td class="text-end text-nowrap">
-                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalUsuario" title="Editar">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalFormulario" title="Editar">
                                             <i class="bi bi-pencil"></i>
                                         </button>
                                         <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar">
@@ -196,11 +195,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="modalUsuario" tabindex="-1" aria-labelledby="tituloModaUsuario" aria-hidden="true">
+                <div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="tituloModalFormulario" aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h2 class="modal-title fs-5" id="tituloModaUsuario"><i class="bi bi-card-list me-2"> Completa el formulario</i></h2>
+                                <h2 class="modal-title fs-5" id="tituloModalFormulario"><i class="bi bi-card-list me-2"> Completa el formulario</i></h2>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                             </div>
                             <div class="modal-body">

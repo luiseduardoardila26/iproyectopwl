@@ -21,12 +21,11 @@
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
             <li class="nav-item"><a href="usuarios.html" class="nav-link"><i class="bi bi-person-standing"></i>usuarios</a></li>  
-            <li class="nav-item"><a href="categorias.html" class="nav-link"><i class="bi bi-tags me-2"></i>categorias</a></li>
             <li class="nav-item"><a href="formulario.html" class="nav-link" aria-current="page"><i class="bi bi-card-list"></i> formulario</a></li>
             <li class="nav-item"><a href="productos.html" class="nav-link"><i class="bi bi-box-seam me-2"></i>Productos</a></li>
             <li class="nav-item"><a href="citas.html" class="nav-link"><i class="bi bi-calendar3"></i> citas</a></li>
             <li class="nav-item"><a href="mascotas.html" class="nav-link"><i class="bi bi-house-heart"></i> mascotas</a></li>
-            <li class="nav-item"><a href="categoria de mascotas.html" class="nav-link"><i class="bi bi-diagram-3-fill"></i> categoria de mascota</a></li>
+            <li class="nav-item"><a href="categoria_de_mascotas.html" class="nav-link"><i class="bi bi-diagram-3-fill"></i> categoria de mascota</a></li>
             <li class="nav-item"><a href="donaciones.html" class="nav-link"><i class="bi bi-cash-coin"></i> donaciones</a></li>
             <li class="nav-item"><a href="empleados.html" class="nav-link"><i class="bi bi-people me-2"></i> empleados</a></li>
         </ul>
@@ -43,7 +42,7 @@
         <div class="dropdown ms-auto">
               <button class="btn btn-light dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                      <i class="bi bi-person-circle fs-5"></i>
-                     <span class="d-none d-md-inline">Administrador</span>
+                     <span class="d-none d-md-inline">Usuario</span>
               </button>
                  <ul class="dropdown-menu dropdown-menu-end shadow">
                      <li><h6 class="dropdown-header">nombre@correo.com</h6></li>
@@ -65,7 +64,7 @@
                     </nav>
                 </div>
                 <div class="d-flex gap-2">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalProducto"><i class="bi bi-plus-lg me-1"></i>Nueva mascota</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalMascota"><i class="bi bi-plus-lg me-1"></i>Nueva mascota</button>
                 </div>
             </div>
                 <div class="card-body">
@@ -117,7 +116,7 @@
                                     <td class="text-center"><span class="badge text-bg-success">12/03/2026</span></td>
                                     <td><span class="badge rounded-pill text-bg-success">Activo en adopción</span></td>
                                     <td class="text-end text-nowrap">
-                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProducto" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalMascota" title="Editar"><i class="bi bi-pencil"></i></button>
                                         <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -159,7 +158,7 @@
                                     <td class="text-center"><span class="badge text-bg-success">27/10/2026</span></td>
                                     <td><span class="badge rounded-pill text-bg-secondary">En proceso de adopción</span></td>
                                     <td class="text-end text-nowrap">
-                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProducto" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalMascota" title="Editar"><i class="bi bi-pencil"></i></button>
                                         <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -181,11 +180,11 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="tituloModalProducto" aria-hidden="true">
+            <div class="modal fade" id="modalMascota" tabindex="-1" aria-labelledby="tituloModalMascota" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2 class="modal-title fs-5" id="tituloModalProducto"><i>🐾</i> Datos de la mascota</h2>
+                            <h2 class="modal-title fs-5" id="tituloModalMascota"><i>🐾</i> Datos de la mascota</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
                         <div class="modal-body">

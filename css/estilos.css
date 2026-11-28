@@ -1,362 +1,191 @@
-/* =============================================
-   TiendaSENA - Hoja de estilos del prototipo
-   ============================================= */
-
-/* ---------- 1. Variables de marca ---------- */
-/* Las variables de :root sirven en todo el documento. */
 :root {
-    /* Verde institucional del SENA. */
---sena-verde: #6f00ff;/*toda variable inicia con -- el color esta en hexadecimal pero lo podemos colocar en texto*/
+--sena-verde: #6f00ff;
     --sena-verde-oscuro: #000000;
     --sena-azul:#212529;
     --sena-titulo: #212529;
-    --sidebar-ancho: 250px/*ancho del menu lateral px es la unidad*/
-/* Cierra el bloque de variables. */
+    --sidebar-ancho: 250px
 }
 
-/* ---------- 2. Generales y personalización de Bootstrap ---------- */
-/* Todo el documento. */
 body {
-    /* Sin margen exterior. */
     margin: 0;
-    /* Tipografía del proyecto (reemplaza la de Bootstrap porque nuestro archivo se carga después). */
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
-/* Cierra la regla. */
 }
 
-/* Texto verde SENA. */
 .text-sena {
-    /* Usa la variable de marca. */
     color: var(--sena-verde);
-/* Cierra la regla. */
 }
 
-/* Botón con los colores del SENA usando las variables de Bootstrap */
-/* se usa junto a btn: class="btn btn-sena". */
 .btn-sena {
-    /* color del texto. */
     --bs-btn-color: #fff;
-    /* color de fondo. */
     --bs-btn-bg: var(--sena-verde);
-    /* color del borde. */
     --bs-btn-border-color: var(--sena-verde);
-    /* texto con el mouse encima. */
     --bs-btn-hover-color: #fff;
-    /* fondo con el mouse encima. */
     --bs-btn-hover-bg: var(--sena-verde-oscuro);
-    /* borde con el mouse encima. */
     --bs-btn-hover-border-color: var(--sena-verde-oscuro);
-    /* texto mientras se hace clic. */
     --bs-btn-active-color: #fff;
-    /* fondo mientras se hace clic. */
     --bs-btn-active-bg: var(--sena-verde-oscuro);
-    /* borde mientras se hace clic. */
     --bs-btn-active-border-color: var(--sena-verde-oscuro);
-/* Cierra la regla. */
 }
 
-/* la coma aplica la misma regla a varios selectores: los campos con el foco… */
 .form-control:focus,
-/* …las listas desplegables con foco… */
 .form-select:focus,
-/* …y las casillas con foco. */
 .form-check-input:focus {
-    /* borde verde en lugar del azul de Bootstrap. */
     border-color: var(--sena-verde);
-    /* “halo” verde translúcido alrededor del campo. */
     box-shadow: 0 0 0 .25rem rgba(57, 169, 0, .25);
-/* Cierra la regla. */
 }
 
-/* casilla o interruptor marcado. */
 .form-check-input:checked {
-    /* relleno verde. */
     background-color: var(--sena-verde);
-    /* borde verde. */
     border-color: var(--sena-verde);
-/* Cierra la regla. */
 }
 
-/* ---------- 3. Login y registro ---------- */
-/* Fondo de la pantalla. */
 .login-fondo {
-    /* Alto mínimo de toda la ventana. */
     min-height: 100vh;
-    /* Flexbox… */
     display: flex;
-    /* …centrado vertical… */
     align-items: center;
-    /* …y horizontal. */
     justify-content: center;
-    /* Relleno en celular. */
     padding: 1rem;
-    /* El padding no suma al alto. */
     box-sizing: border-box;
-    /* Degradado azul → verde. */
     background: linear-gradient(135deg, var(--sena-verde), var(--sena-verde-oscuro), var(--sena-azul));
-/* Cierra la regla. */
 }
 
-/* Tarjeta blanca. */
 .login-card {
-    /* Ancho completo… */
     width: 100%;
-    /* …hasta 420px. */
     max-width: 420px;
-    /* Fondo blanco. */
     background-color: #fff;
-    /* Esquinas redondeadas. */
     border-radius: 1rem;
-    /* Relleno interno. */
     padding: 2.5rem 2rem;
-    /* El ancho incluye el relleno. */
     box-sizing: border-box;
-    /* Sombra. */
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .25);
-/* Cierra la regla. */
 }
 
-/* dos clases pegadas (sin espacio) = elementos que tienen ambas clases. La usará el registro, que tiene más campos. */
 .login-card.ancha {
-    /* tarjeta más ancha. */
     max-width: 680px;
-/* Cierra la regla. */
 }
 
-/* Encabezado de la tarjeta. */
 .login-encabezado {
-    /* Centrado. */
     text-align: center;
-    /* Espacio inferior. */
     margin-bottom: 1.5rem;
-/* Cierra la regla. */
 }
 
-/* Título dentro del encabezado. */
 .login-encabezado h1 {
-    /* Azul SENA. */
     color: var(--sena-titulo);
-    /* Margen pequeño. */
     margin: .25rem 0;
-/* Cierra la regla. */
 }
 
-/* Textos pequeños de abajo. */
 .login-pie {
-    /* Centrados. */
     text-align: center;
-    /* Letra pequeña. */
     font-size: .875rem;
-    /* Gris. */
     color: #6c757d;
-    /* Margen superior. */
     margin: 1.25rem 0 0;
-/* Cierra la regla. */
 }
 
-/* ---------- 4. Panel: menú lateral ---------- */
-/* Clase del <aside> del menú lateral. */
 .sidebar {
-    /* Fondo azul SENA. Usamos !important porque en pantallas grandes Bootstrap pone el offcanvas-lg con fondo transparente usando !important, y solo así podemos ganarle. */
     background-color: var(--sena-azul) !important;
-    /* Texto blanco dentro del menú. */
     color: #fff;
-/* Cierra la regla. */
 }
-
-/* Enlaces del menú lateral. */
 .sidebar .nav-link {
-    /* Blanco al 75%: los enlaces no activos se ven un poco apagados. */
     color: rgba(255, 255, 255, .75);
-    /* Esquinas redondeadas. */
     border-radius: .5rem;
-    /* Separación entre enlaces. */
     margin-bottom: .25rem;
-/* Cierra la regla. */
 }
 
-/* Enlace con el mouse encima. */
 .sidebar .nav-link:hover {
-    /* Texto blanco total. */
     color: #fff;
-    /* Fondo blanco al 10%: un resaltado sutil. */
     background-color: rgba(255, 255, 255, .1);
-/* Cierra la regla. */
 }
 
-/* Enlace de la página actual (tiene las dos clases: nav-link y active). */
 .sidebar .nav-link.active {
-    /* Texto blanco. */
     color: #fff;
-    /* Fondo verde SENA: el usuario sabe en qué módulo está. */
     background-color: var(--sena-verde);
-/* Cierra la regla. */
 }
 
-/* Las reglas siguientes solo aplican en pantallas de 992px o más (el breakpoint lg de Bootstrap). */
 @media (min-width: 992px) {
-    /* Menú lateral en computador. */
     .sidebar {
-        /* Queda fijo: no se mueve al desplazar la página. */
         position: fixed;
-        /* Pegado arriba… */
         top: 0;
-        /* …y abajo (ocupa todo el alto). */
         bottom: 0;
-        /* Pegado a la izquierda. */
         left: 0;
-        /* Ancho tomado de la variable (250px). */
         width: var(--sidebar-ancho);
-    /* Cierra la regla. */
     }
 
-    /* Cuerpo del menú en computador. */
     .sidebar .offcanvas-body {
-        /* Ocupa todo el alto, así el botón “Cerrar sesión” queda al fondo. */
         height: 100%;
-        /* Si el menú es muy largo, aparece barra de desplazamiento. */
         overflow-y: auto;
-    /* Cierra la regla. */
     }
 
-    /* Contenedor de la barra superior + el contenido. */
     .contenido {
-        /* Se corre a la derecha el ancho del menú para que no quede debajo de él. */
         margin-left: var(--sidebar-ancho);
-    /* Cierra la regla. */
     }
-/* Cierra la media query. */
 }
 
-/* ---------- 5. Panel: tarjetas de indicadores ---------- */
-/* Tarjetas con números del dashboard (KPI = indicador clave). */
 .tarjetas-kpi {
-    /* Sin borde general… */
     border: 0;
-    /* …excepto una franja verde a la izquierda. */
     border-left: 4px solid var(--sena-verde);
-    /* Anima el movimiento y la sombra en 0.2 segundos. */
     transition: transform .2s, box-shadow .2s;
-/* Cierra la regla. */
 }
 
-/* Tarjeta con el mouse encima. */
+
 .tarjetas-kpi:hover {
-    /* La sube 4px: efecto de “levantarse”. */
     transform: translateY(-4px);
-    /* Sombra más marcada (!important para ganarle a shadow-sm). */
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .12) !important;
-/* Cierra la regla. */
 }
 
-/* Cuadro de color que contiene el ícono de cada tarjeta. */
 .icono-kpi {
-    /* Ancho fijo. */
     width: 52px;
-    /* Alto fijo (cuadrado). */
     height: 52px;
-    /* Flexbox para centrar el ícono… */
     display: flex;
-    /* …verticalmente… */
     align-items: center;
-    /* …y horizontalmente. */
     justify-content: center;
-    /* Esquinas redondeadas. */
     border-radius: .75rem;
-    /* Tamaño del ícono. */
     font-size: 1.5rem;
-/* Cierra la regla. */
 }
 
-/* ---------- 6. Módulos de gestión ---------- */
-/* Círculo con las iniciales del usuario. */
 .avatar {
-    /* Ancho fijo. */
     width: 38px;
-    /* Alto igual al ancho… */
     height: 38px;
-    /* …y un radio del 50% lo convierte en círculo. */
     border-radius: 50%;
-    /* Flexbox en línea para centrar las letras. */
     display: inline-flex;
-    /* Centrado vertical. */
     align-items: center;
-    /* Centrado horizontal. */
     justify-content: center;
-    /* Letras seminegritas. */
     font-weight: 600;
-    /* Letras algo pequeñas. */
     font-size: .85rem;
-    /* Evita que el círculo se aplaste cuando falta espacio. */
     flex-shrink: 0;
-/* Cierra la regla. */
 }
 
-/* Personalizamos la paginación de Bootstrap con sus variables. */
 .pagination {
-    /* Color de los números. */
     --bs-pagination-color: var(--sena-azul);
-    /* Fondo de la página activa. */
     --bs-pagination-active-bg: var(--sena-verde);
-    /* Borde de la página activa. */
     --bs-pagination-active-border-color: var(--sena-verde);
-/* Cierra la regla. */
 }
 
-/* Tarjeta punteada que invita a crear una categoría nueva. */
 .tarjeta-agregar {
-    /* Borde gris punteado (dashed). */
     border: 2px dashed #ced4da;
-    /* Sin fondo: se ve “vacía”. */
     background-color: transparent;
-    /* Texto gris. */
     color: #6c757d;
-    /* Alto mínimo similar al de las demás tarjetas. */
     min-height: 200px;
-    /* Anima los cambios de color. */
     transition: border-color .2s, color .2s;
-/* Cierra la regla. */
 }
 
-/* Al pasar el mouse… */
 .tarjeta-agregar:hover {
-    /* …el borde se vuelve verde… */
     border-color: var(--sena-verde);
-    /* …y el texto también. */
     color: var(--sena-verde);
-/* Cierra la regla. */
 }
 
-/* Cuadro donde iría la foto del producto. */
 .miniatura {
-    /* Ancho. */
     width: 48px;
-    /* Alto. */
     height: 48px;
-    /* Flexbox para centrar el ícono. */
     display: flex;
-    /* Centrado vertical. */
     align-items: center;
-    /* Centrado horizontal. */
     justify-content: center;
-    /* Esquinas redondeadas. */
     border-radius: .5rem;
-    /* Fondo gris azulado claro. */
     background-color: #eef2f5;
-    /* Ícono azul. */
     color: var(--sena-azul);
-    /* Tamaño del ícono. */
     font-size: 1.4rem;
-    /* No se aplasta. */
     flex-shrink: 0;
-/* Cierra la regla. */
 }
 
-/* Lista de categorías de la clase 7: el ítem activo también en verde SENA. */
 .list-group {
-    /* Fondo del ítem activo. */
     --bs-list-group-active-bg: var(--sena-verde);
-    /* Borde del ítem activo. */
     --bs-list-group-active-border-color: var(--sena-verde);
-/* Cierra la regla. */
 }
